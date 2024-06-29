@@ -1,6 +1,8 @@
 {-# LANGUAGE ViewPatterns #-}
 
-module Module where
+module Module (
+    sumDigits
+) where
 
 -- exercise 1
 toDigits ::  Integer -> [Integer]
@@ -20,6 +22,9 @@ doubleEveryOther [x] = [x]
 doubleEveryOther _ = []
 
 -- exercise 3
+sumDigits :: [ Integer ] -> Integer
+sumDigits list = sum(map (sum . toDigits) list)
+
 -- exercise 4
 -- exercise 5
 -- exercise 6
