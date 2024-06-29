@@ -1,6 +1,9 @@
 {-# LANGUAGE ViewPatterns #-}
 
-module Module (
+module MyModule (
+    toDigits,
+    toDigitsRev,
+    doubleEveryOther,
     sumDigits
 ) where
 
