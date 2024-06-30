@@ -4,7 +4,8 @@ module MyModule (
     toDigits,
     toDigitsRev,
     doubleEveryOther,
-    sumDigits
+    sumDigits,
+    validate
 ) where
 
 -- exercise 1
@@ -29,5 +30,8 @@ sumDigits :: [ Integer ] -> Integer
 sumDigits list = sum(map (sum . toDigits) list)
 
 -- exercise 4
+validate :: Integer -> Bool
+validate value = (sumDigits . doubleEveryOther . toDigits) value `mod ` 10 == 0
+
 -- exercise 5
 -- exercise 6
